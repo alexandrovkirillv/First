@@ -30,19 +30,11 @@ public class Main {
         for (int i = 0; i < num; i++) {
             for (int j = 0; j < num; j++) {
                 int value = (i+1)*(j+1);
-                int indent = lenght -(String.valueOf(value)).length();
-                //System.out.print(indent);
-
                 String tf = "%"+lenght+"d"+"|"; // задаем параметр форматирования для printf
-
                 System.out.printf(tf, value); // печатаем отформатированную матрицу
-
             }
-
             System.out.println();
             System.out.println (separator1);
-
-
         }
     }
 }
