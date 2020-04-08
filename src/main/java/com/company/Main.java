@@ -22,19 +22,24 @@ public class Main {
         String str= "-";
         String str1= "+";
         String text=" ";
+        int Value=0;
         String separator = (str.repeat(lenght)+str1);
-        String separator1 =separator.repeat(num-1)+str.repeat(lenght);
-       // System.out.println(separator1); // вывод строки с +-
-
+        String separator1 =separator.repeat(num-1)+str.repeat(lenght); //строка с +-
 
         for (int i = 0; i < num; i++) {
-            for (int j = 0; j < num; j++) {
+            for (int j = 0; j < num; j++)
+            {
                 int value = (i+1)*(j+1);
                 String tf = "%"+lenght+"d"+"|"; // задаем параметр форматирования для printf
+                String tf1 = "%"+lenght+ 'd'+ text;
+
                 System.out.printf(tf, value); // печатаем отформатированную матрицу
             }
             System.out.println();
-            System.out.println (separator1);
+            System.out.println(separator1); // вывод строки с +-
+
+
+            }
         }
     }
-}
+
