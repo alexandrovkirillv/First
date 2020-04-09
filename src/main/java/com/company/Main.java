@@ -5,8 +5,11 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        //-----------
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите размер таблицы: ");//просим ввести число для размера таблицы
+        System.out.print("Введите размер таблицы: ");
+
         int num = in.nextInt();
         in.close();
 
