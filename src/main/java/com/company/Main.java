@@ -8,29 +8,29 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите размер таблицы: ");
         if (in.hasNextInt()) {
-            int num = in.nextInt();
+            int sizetable = in.nextInt();
             in.close();
 
-            if (num > 0) {
+            if (sizetable > 0) {
                 int size = 32 * 32;
-                String size1 = String.valueOf(size);
-                int lenght = size1.length();
+                String sizeformat = String.valueOf(size);
+                int lenghtformat = sizeformat.length();
                 String str = "-";
                 String str1 = "+";
-                String separator = (str.repeat(lenght) + str1);
-                String separator1 = separator.repeat(num - 1) + str.repeat(lenght);
+                String separator = (str.repeat(lenghtformat) + str1);
+                String separator1 = separator.repeat(sizetable - 1) + str.repeat(lenghtformat);
 
-                for (int i = 0; i < num; i++) {
-                    for (int j = 0; j < num; j++) {
+                for (int i = 0; i < sizetable; i++) {
+                    for (int j = 0; j < sizetable; j++) {
                         int value = (i + 1) * (j + 1);
-                        String tf = "%" + lenght + "d" + "|";
-                        String tf1 = "%" + lenght + 'd' + " ";
-                        if (j < num - 1) {
+                        String tf = "%" + lenghtformat + "d" + "|";
+                        String tf1 = "%" + lenghtformat + 'd' + " ";
+                        if (j < sizetable - 1) {
                             System.out.printf(tf, value);
                         } else System.out.printf(tf1, value);
                     }
                     System.out.println();
-                    if (i < num - 1) {
+                    if (i < sizetable - 1) {
                         System.out.println(separator1);
                     }
                 }
