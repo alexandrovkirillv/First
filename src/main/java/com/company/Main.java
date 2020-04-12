@@ -7,7 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите размер таблицы:");
-        if (in.hasNextInt()) {
+        if (in.hasNextInt()== false)
+        {
+            System.out.println("Запустите программу еще раз и введите целое положительное число");
+        } else {
             int sizetable = in.nextInt();
             in.close();
 
@@ -33,8 +36,6 @@ public class Main {
                     }
                 }
             } else System.out.println("Запустите программу еще раз и введите целое положительное число");
-        } else {
-            System.out.println("Запустите программу еще раз и введите целое положительное число");
         }
     }
 }
