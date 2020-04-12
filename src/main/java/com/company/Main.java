@@ -6,7 +6,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Введите размер таблицы: ");
+        System.out.print("Введите размер таблицы:");
         if (in.hasNextInt()) {
             int sizetable = in.nextInt();
             in.close();
@@ -17,9 +17,7 @@ public class Main {
                 int lenghtformat = sizeformat.length();
                 String str = "-";
                 String str1 = "+";
-                String separator = (str.repeat(lenghtformat) + str1);
-                String separator1 = separator.repeat(sizetable - 1) + str.repeat(lenghtformat);
-
+                String separator = (str.repeat(lenghtformat) + str1).repeat(sizetable - 1)+ str.repeat(lenghtformat);
                 for (int i = 0; i < sizetable; i++) {
                     for (int j = 0; j < sizetable; j++) {
                         int value = (i + 1) * (j + 1);
@@ -31,12 +29,12 @@ public class Main {
                     }
                     System.out.println();
                     if (i < sizetable - 1) {
-                        System.out.println(separator1);
+                        System.out.println(separator);
                     }
                 }
-            } else System.out.println("Введите число больше 0");
+            } else System.out.println("Запустите программу еще раз и введите целое положительное число");
         } else {
-            System.out.println("Введите целое положительное число");
+            System.out.println("Запустите программу еще раз и введите целое положительное число");
         }
     }
 }
