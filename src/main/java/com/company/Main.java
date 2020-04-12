@@ -1,13 +1,13 @@
 package com.company;
 
 import java.util.Scanner;
-import java.io.*;
+import java.io.*; //зачем этот импорт ?
 
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Введите размер таблицы:");
-        if (in.hasNextInt()== false)
+        if (in.hasNextInt()== false) // посмотри что советует идея 
         {
             System.out.println("Запустите программу еще раз и введите целое положительное число");
         } else {
@@ -18,7 +18,7 @@ public class Main {
                 int size = 32 * 32;
                 String sizeformat = String.valueOf(size);
                 int lenghtformat = sizeformat.length();
-                String str = "-";
+                String str = "-"; 
                 String str1 = "+";
                 String separator = (str.repeat(lenghtformat) + str1).repeat(sizetable - 1)+ str.repeat(lenghtformat);
                 for (int i = 0; i < sizetable; i++) {
